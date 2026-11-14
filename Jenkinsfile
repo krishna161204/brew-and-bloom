@@ -3,8 +3,8 @@ pipeline {
     agent any
 
     triggers {
-        githubPush()
-    }
+    pollSCM('H/2 * * * *')
+}
 
     environment {
         EC2_HOST = '34.224.156.171'
